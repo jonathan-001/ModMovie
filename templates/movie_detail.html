@@ -1,0 +1,10 @@
+<h1>{{ movie.title }}</h1>
+<img src="" alt="{{ movie.title }}">
+<p>{{ movie.description }}</p>
+<p>Category: {{ movie.category }}</p>
+<p>Tags: {% for tag in movie.tags.all %} {{ tag.name }} {% endfor %}</p>
+<p>Rating: {{ movie.rating }} / 5</p>
+<p>Views: {{ movie.view_count }}</p>
+
+<a href="{{ movie.video_file.url }}" target="_blank">Watch Now</a> |
+<a href="{{ movie.download_file.url }}" download>Download</a>
